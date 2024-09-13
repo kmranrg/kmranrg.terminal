@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Background container for floating characters -->
+    <div id="background-container"></div>
+
     <div class="terminal">
         <div class="terminal-bar">
             <div class="terminal-buttons">
@@ -14,21 +17,22 @@
                 <span class="button yellow"></span>
                 <span class="button green"></span>
             </div>
-            <p class="terminal-title">kumar_anurag@research: ~</p>
+            <p class="terminal-title">hello@world: ~</p>
         </div>
         <div class="terminal-body">
             <!-- About Me Section -->
             <section id="about-me" class="collapsible">
                 <div class="clickable-title" onclick="toggleSection('about-me-content')">
-                    <h2>About Me</h2>
+                    <h2>> About Me</h2>
                 </div>
                 <div id="about-me-content" class="content active">
                     <div class="about-me-container">
                         <p id="about-text">
                             I am Kumar Anurag, currently pursuing my PhD at the University of New Mexico. 
                             My research focuses on AI-powered systems, Reservoir Computing, and Energy Optimization.
+                            Say hi to my PhD advisor <a href="https://wenbinwan.com/" target="_blank">Wenbin Wan</a>.
                         </p>
-                        <img src="green_tinted_image.jpeg" alt="Kumar Anurag" class="about-me-image">
+                        <img src="me.jpg" alt="Kumar Anurag" class="about-me-image">
                     </div>
                 </div>
             </section>
@@ -36,13 +40,13 @@
             <!-- Projects Section -->
             <section id="projects" class="collapsible">
                 <div class="clickable-title" onclick="toggleSection('projects-content')">
-                    <h2>Projects</h2>
+                    <h2>> Projects</h2>
                 </div>
                 <div id="projects-content" class="content">
                     <ul id="projects-text">
-                        <li>AI-Powered Threat Detection System</li>
-                        <li>Proactive Server Resource Management using RNN & LSTM</li>
-                        <li>ConnectAI - AI-Powered Peer Learning Platform</li>
+                        <li>ConnectAI: AI-Powered Peer Learning Platform Using Graph Neural Networks</li>
+                        <li>Human Safe Perception: A Vision for Secure and Immersive Virtual Reality</li>
+                        <li>Predicting the time-varying waves using Reservoir Computing</li>
                     </ul>
                 </div>
             </section>
@@ -50,15 +54,21 @@
             <!-- Contact Section -->
             <section id="contact" class="collapsible">
                 <div class="clickable-title" onclick="toggleSection('contact-content')">
-                    <h2>Contact</h2>
+                    <h2>> Contact</h2>
                 </div>
                 <div id="contact-content" class="content">
-                    <p id="contact-text">Email: kumar.anurag@example.com</p>
-                    <p>LinkedIn: <a href="https://linkedin.com/in/kumar-anurag" target="_blank">linkedin.com/in/kumar-anurag</a></p>
+                    <p id="contact-text">Email: <a href="mailto:kmranrg@unm.edu" target="_blank">kmranrg@unm.edu</a></p>
+                    <p>LinkedIn: <a href="https://linkedin.com/in/kmranrg" target="_blank">linkedin.com/in/kmranrg</a></p>
                 </div>
             </section>
         </div>
     </div>
+
+    <!-- Footer Section -->
+    <footer>
+        Copyright © Kumar Anurag
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
