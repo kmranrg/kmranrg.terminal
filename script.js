@@ -1,12 +1,18 @@
 function toggleSection(sectionId) {
     var content = document.getElementById(sectionId);
+    var title = content.previousElementSibling.querySelector('h2 > span');
 
     if (content.classList.contains("active")) {
         content.classList.remove("active");
+        title.classList.remove("rotate");
     } else {
         content.classList.add("active");
+        title.classList.add("rotate");
     }
 }
+
+// Initial rotation for the "About Me" section as it's active by default
+document.querySelector('#about-me .clickable-title h2 > span').classList.add('rotate');
 
 // Characters to be used for the floating background effect
 const characters = ["~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "{", "}", ";"];
