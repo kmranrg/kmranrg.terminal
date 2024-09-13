@@ -6,9 +6,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    flex-direction: column; /* Allows stacking of terminal and footer */
-    overflow: hidden;
+    flex-direction: column;
+    overflow-y: auto;
+    min-height: 100vh;
+    padding-top: 20px; /* Adds space above the terminal */
+    padding-bottom: 20px; /* Adds space below the footer */
 }
 
 #background-container {
@@ -44,7 +46,7 @@ body {
     max-width: 900px;
     background-color: #000;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: none; /* Remove any box-shadow */
     position: relative;
     z-index: 1;
     display: flex;
@@ -112,6 +114,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Default layout: picture on the right */
 .about-me-container {
     display: flex;
     align-items: center;
@@ -125,6 +128,7 @@ a:hover {
     border-radius: 10px;
 }
 
+/* Collapsible section */
 .collapsible {
     margin-bottom: 20px;
 }
@@ -143,14 +147,36 @@ a:hover {
 
 /* Footer Style */
 footer {
-    background-color: #333; /* Gray background for the footer */
-    color: #e0e0e0; /* Whitish color for text */
+    background-color: #333;
+    color: #e0e0e0;
     font-size: 12px;
     padding: 10px;
     text-align: center;
-    border-radius: 0 0 10px 10px; /* Same border-radius as the terminal bar */
+    border-radius: 0 0 10px 10px;
     width: 90%;
     max-width: 900px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    margin-top: 10px; /* Space between the terminal and footer */
+    box-shadow: none; /* No shadow */
+    margin-top: 0;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    .about-me-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-me-image {
+        order: -1; /* Force image to appear before the text */
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 120px; /* Smaller image size for mobile */
+    }
+
+    #about-me-content {
+        text-align: center; /* Center the text */
+        margin-bottom: 20px;
+    }
 }
