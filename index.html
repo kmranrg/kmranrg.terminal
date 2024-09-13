@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumar Anurag | PhD Research</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-bar">
+            <div class="terminal-buttons">
+                <span class="button red"></span>
+                <span class="button yellow"></span>
+                <span class="button green"></span>
+            </div>
+            <p class="terminal-title">kumar_anurag@research: ~</p>
+        </div>
+        <div class="terminal-body">
+            <!-- About Me Section -->
+            <section id="about-me" class="collapsible">
+                <div class="clickable-title" onclick="toggleSection('about-me-content')">
+                    <h2>About Me</h2>
+                </div>
+                <div id="about-me-content" class="content active">
+                    <div class="about-me-container">
+                        <p id="about-text">
+                            I am Kumar Anurag, currently pursuing my PhD at the University of New Mexico. 
+                            My research focuses on AI-powered systems, Reservoir Computing, and Energy Optimization.
+                        </p>
+                        <img src="green_tinted_image.jpeg" alt="Kumar Anurag" class="about-me-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="collapsible">
+                <div class="clickable-title" onclick="toggleSection('projects-content')">
+                    <h2>Projects</h2>
+                </div>
+                <div id="projects-content" class="content">
+                    <ul id="projects-text">
+                        <li>AI-Powered Threat Detection System</li>
+                        <li>Proactive Server Resource Management using RNN & LSTM</li>
+                        <li>ConnectAI - AI-Powered Peer Learning Platform</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="collapsible">
+                <div class="clickable-title" onclick="toggleSection('contact-content')">
+                    <h2>Contact</h2>
+                </div>
+                <div id="contact-content" class="content">
+                    <p id="contact-text">Email: kumar.anurag@example.com</p>
+                    <p>LinkedIn: <a href="https://linkedin.com/in/kumar-anurag" target="_blank">linkedin.com/in/kumar-anurag</a></p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
