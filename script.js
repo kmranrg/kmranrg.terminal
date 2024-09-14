@@ -45,3 +45,30 @@ window.onload = function() {
     kaImage.classList.add('tubelight-effect');
 };
 
+// Disable right-click globally
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault(); // Prevent right-click context menu
+});
+
+// Disable certain keyboard shortcuts
+document.addEventListener('keydown', function (e) {
+    // Prevent F12 (Inspect)
+    if (e.key === 'F12') {
+        e.preventDefault();
+    }
+    // Prevent Ctrl+Shift+I (Developer Tools)
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+        e.preventDefault();
+    }
+    // Prevent Ctrl+U (View Source)
+    if (e.ctrlKey && e.key === 'u') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.key === 'U') {
+        e.preventDefault();
+    }
+    // Prevent Ctrl+Shift+C (Element Inspector)
+    if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+        e.preventDefault();
+    }
+});
