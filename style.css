@@ -26,7 +26,7 @@ body {
 /* Style for each floating character */
 .floating-char {
     position: absolute;
-    color: rgba(0, 255, 0, 0.2);
+    color: rgba(0, 255, 0, 0.5);
     animation: float 10s linear infinite;
     user-select: none;
     will-change: transform;
