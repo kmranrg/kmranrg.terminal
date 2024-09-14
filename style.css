@@ -190,3 +190,30 @@ footer {
         margin-bottom: 20px;
     }
 }
+
+.tubelight-effect {
+    opacity: 0; /* Initially invisible */
+    animation: tubelight-flicker 1s ease-in-out forwards; /* Faster tubelight flicker animation */
+}
+
+@keyframes tubelight-flicker {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    20% { opacity: 0; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    50% { opacity: 1; }
+    60% { opacity: 0; }
+    70% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+.tubelight-image-container {
+    text-align: center; /* Center the image */
+    margin-top: 20px;
+}
+
+.tubelight-image-container img {
+    width: 200px; /* Adjust the image size */
+    height: auto;
+}

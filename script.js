@@ -39,3 +39,9 @@ function generateFloatingChar() {
 
 // Generate floating characters at intervals
 setInterval(generateFloatingChar, 300);
+
+window.onload = function() {
+    const kaImage = document.getElementById('ka-image');
+    kaImage.classList.add('tubelight-effect');
+};
+
