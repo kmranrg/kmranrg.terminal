@@ -26,7 +26,7 @@ body {
 /* Style for each floating character */
 .floating-char {
     position: absolute;
-    color: rgba(0, 255, 0, 0.5);
+    color: rgba(0, 255, 0, 0.4);
     animation: float 10s linear infinite;
     user-select: none;
     will-change: transform;
@@ -72,6 +72,7 @@ body {
 .terminal-buttons {
     display: flex;
     gap: 5px;
+    margin-left: 15px;
 }
 
 .terminal-buttons .button {
