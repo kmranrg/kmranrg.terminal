@@ -217,3 +217,26 @@ footer {
     width: 200px; /* Adjust the image size */
     height: auto;
 }
+
+.signature-container {
+    text-align: right; /* Align signature to the right */
+    margin-top: 35px; /* Add space between Contact and Signature */
+}
+
+.signature-image {
+    width: 80px; /* Adjust the size of the signature */
+    height: auto;
+    margin-right: 10px; /* Add space between signature and terminal edge */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    .signature-container {
+        text-align: center; /* Center signature on mobile */
+    }
+    
+    .signature-image {
+        margin-right: 0; /* Remove right margin for centered signature */
+        margin-bottom: 20px; /* Add space below signature on mobile */
+    }
+}
