@@ -1,2 +1,3 @@
 # kmranrg.terminal
-my terminal flavored website
+
+![website](https://github.com/kmranrg/kmranrg.terminal/blob/main/me.png)
