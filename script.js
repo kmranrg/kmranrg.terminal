@@ -15,7 +15,7 @@ function toggleSection(sectionId) {
 document.querySelector('#about-me .clickable-title h2 > span').classList.add('rotate');
 
 // Characters to be used for the floating background effect
-const characters = ["~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "{", "}", ";"];
+const characters = ["~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "{", "}", ";", "?", ";", "/", "<", ">", ":", "=", "+", "'"];
 const backgroundContainer = document.getElementById("background-container");
 
 // Function to generate a random floating character
