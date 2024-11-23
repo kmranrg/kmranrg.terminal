@@ -72,3 +72,20 @@ document.addEventListener('keydown', function (e) {
         e.preventDefault();
     }
 });
+
+const toggleButton = document.getElementById("toggle-theme-logo");
+const profileImage = document.getElementById("ka-image");
+const kaSign = document.getElementById("ka-sign");
+
+toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    // Update button icon
+    if (document.body.classList.contains("light-mode")) {
+        profileImage.src = "me_light.png";
+        kaSign.src = "sign_light.png";
+    } else {
+        profileImage.src = "me.png";
+        kaSign.src = "sign.png";
+    }
+});

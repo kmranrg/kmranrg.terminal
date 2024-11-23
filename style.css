@@ -1,12 +1,11 @@
 ::selection {
-    background-color: #00ff00; /* Green background */
-    color: #000000; /* Black text */
+    background-color: #00ff00; 
+    color: #000000; 
 }
 
-/* For Firefox */
 ::-moz-selection {
-    background-color: #00ff00; /* Green background */
-    color: #000000; /* Black text */
+    background-color: #00ff00;
+    color: #000000;
 }
 
 body {
@@ -34,7 +33,6 @@ body {
     overflow: hidden;
 }
 
-/* Style for each floating character */
 .floating-char {
     position: absolute;
     color: rgba(0, 255, 0, 0.4);
@@ -54,7 +52,7 @@ body {
 
 .terminal {
     width: 90%;
-    max-width: 900px;
+    max-width: 1000px;
     background-color: #000;
     border-radius: 10px;
     box-shadow: none;
@@ -107,16 +105,16 @@ h2 {
     color: #00ff00;
     margin-bottom: 10px;
     display: inline-block;
-    transition: transform 0.3s ease-in-out; /* Transition for smooth rotation */
+    transition: transform 0.3s ease-in-out; 
 }
 
 h2 > span {
     display: inline-block;
-    transform: rotate(0deg); /* Default: no rotation */
+    transform: rotate(0deg);
 }
 
 h2 > span.rotate {
-    transform: rotate(90deg); /* Rotated when active */
+    transform: rotate(90deg); 
 }
 
 ul {
@@ -166,7 +164,6 @@ a:hover {
     display: block;
 }
 
-/* Footer Style */
 footer {
     background-color: #333;
     color: #e0e0e0;
@@ -175,12 +172,11 @@ footer {
     text-align: center;
     border-radius: 0 0 10px 10px;
     width: 90%;
-    max-width: 900px;
+    max-width: 1000px;
     box-shadow: none;
     margin-top: 0;
 }
 
-/* Media Query for Mobile Devices */
 @media (max-width: 600px) {
     .about-me-container {
         display: flex;
@@ -203,8 +199,8 @@ footer {
 }
 
 .tubelight-effect {
-    opacity: 0; /* Initially invisible */
-    animation: tubelight-flicker 1s ease-in-out forwards; /* Faster tubelight flicker animation */
+    opacity: 0;
+    animation: tubelight-flicker 1s ease-in-out forwards;
 }
 
 @keyframes tubelight-flicker {
@@ -220,34 +216,97 @@ footer {
 }
 
 .tubelight-image-container {
-    text-align: center; /* Center the image */
+    text-align: center;
     margin-top: 20px;
 }
 
 .tubelight-image-container img {
-    width: 200px; /* Adjust the image size */
+    width: 200px;
     height: auto;
 }
 
 .signature-container {
-    text-align: right; /* Align signature to the right */
-    margin-top: 35px; /* Add space between Contact and Signature */
+    text-align: right;
+    margin-top: 35px; 
 }
 
 .signature-image {
-    width: 80px; /* Adjust the size of the signature */
+    width: 80px;
     height: auto;
-    margin-right: 10px; /* Add space between signature and terminal edge */
+    margin-right: 10px; 
 }
 
-/* Media Query for Mobile Devices */
 @media (max-width: 600px) {
     .signature-container {
-        text-align: center; /* Center signature on mobile */
+        text-align: center;
     }
     
     .signature-image {
-        margin-right: 0; /* Remove right margin for centered signature */
-        margin-bottom: 20px; /* Add space below signature on mobile */
+        margin-right: 0; 
+        margin-bottom: 20px; 
     }
+
+    .content {
+        text-align: center;
+    }
+}
+
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+#toggle-theme-logo {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#toggle-theme-logo:hover {
+    background-color: #818180;
+    transform: scale(1.1);
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.light-mode a {
+    color: #333;
+}
+
+.light-mode h2 {
+    color: #333;
+}
+
+.light-mode .terminal {
+    background-color: #fff;
+}
+
+.light-mode ::selection {
+    background-color: #333; 
+    color: #fff; 
+}
+
+.light-mode ::-moz-selection {
+    background-color: #333;
+    color: #fff;
+}
+
+.light-mode .floating-char {
+    position: absolute;
+    color: rgba(51, 51, 51, 0.4);
+    animation: float 10s linear infinite;
+    user-select: none;
+    will-change: transform;
 }
