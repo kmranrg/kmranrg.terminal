@@ -77,15 +77,25 @@ const toggleButton = document.getElementById("toggle-theme-logo");
 const profileImage = document.getElementById("ka-image");
 const kaSign = document.getElementById("ka-sign");
 
-toggleButton.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-
-    // Update button icon
-    if (document.body.classList.contains("light-mode")) {
+function applyTheme(theme) {
+    if (theme === "light-mode") {
+        document.body.classList.add("light-mode");
         profileImage.src = "me_light.png";
         kaSign.src = "sign_light.png";
     } else {
+        document.body.classList.remove("light-mode");
         profileImage.src = "me.png";
         kaSign.src = "sign.png";
     }
+}
+
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+    applyTheme(savedTheme);
+}
+
+toggleButton.addEventListener("click", () => {
+    const currentTheme = document.body.classList.contains("light-mode") ? "dark-mode" : "light-mode";
+    applyTheme(currentTheme);
+    localStorage.setItem("theme", currentTheme);
 });
