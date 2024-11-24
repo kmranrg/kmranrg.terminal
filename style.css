@@ -144,7 +144,7 @@ a:hover {
 .about-me-image {
     width: 150px;
     height: auto;
-    margin-left: 20px;
+    margin-left: 60px;
     border-radius: 10px;
 }
 
@@ -475,4 +475,8 @@ footer {
         width: 45%;
         box-sizing: border-box;
     }
+}
+
+p {
+    text-align: justify;
 }
