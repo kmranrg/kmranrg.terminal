@@ -463,3 +463,16 @@ footer {
 .lightbox-close:hover {
     color: #ff0000;
 }
+
+@media (min-width: 600px) {
+    .blog-signature-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .blog-signature-row {
+        width: 45%;
+        box-sizing: border-box;
+    }
+}
