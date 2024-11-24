@@ -1,27 +1,34 @@
 const calendarIcons = document.querySelectorAll(".calendar-icon");
 
-// Characters to be used for the floating background effect
-const characters = ["~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "{", "}", ";", "?", ";", "/", "<", ">", ":", "=", "+", "'"];
-const backgroundContainer = document.getElementById("background-container");
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("blogs_script.js loaded for blogs.html");
 
-// Function to generate a random floating character
-function generateFloatingChar() {
-    const charElement = document.createElement("div");
-    charElement.classList.add("floating-char");
-    charElement.innerText = characters[Math.floor(Math.random() * characters.length)];
+    // Characters to be used for the floating background effect
+    const characters = ["~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "{", "}", ";", "?", ";", "/", "<", ">", ":", "=", "+", "'"];
+    const backgroundContainer = document.getElementById("background-container");
 
-    // Randomize position, size, and animation duration
-    charElement.style.left = Math.random() * 100 + "vw"; // Random horizontal position
-    charElement.style.fontSize = Math.random() * 40 + 20 + "px"; // Random font size between 20px and 60px
-    charElement.style.animationDuration = Math.random() * 8 + 5 + "s"; // Random animation speed
+    // Function to generate a random floating character
+    function generateFloatingChar() {
+        const charElement = document.createElement("div");
+        charElement.classList.add("floating-char");
+        charElement.innerText = characters[Math.floor(Math.random() * characters.length)];
 
-    backgroundContainer.appendChild(charElement);
+        // Randomize position, size, and animation duration
+        charElement.style.left = Math.random() * 100 + "vw"; // Random horizontal position
+        charElement.style.fontSize = Math.random() * 40 + 20 + "px"; // Random font size between 20px and 60px
+        charElement.style.animationDuration = Math.random() * 8 + 5 + "s"; // Random animation speed
 
-    // Remove the character after its animation ends
-    setTimeout(() => {
-        charElement.remove();
-    }, parseInt(charElement.style.animationDuration) * 1000);
-}
+        backgroundContainer.appendChild(charElement);
+
+        // Remove the character after its animation ends
+        setTimeout(() => {
+            charElement.remove();
+        }, parseInt(charElement.style.animationDuration) * 1000);
+    }
+
+    // Generate floating characters at intervals
+    setInterval(generateFloatingChar, 300);
+});
 
 // Disable right-click globally
 document.addEventListener('contextmenu', function (e) {
@@ -51,21 +58,36 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-function toggleSection(sectionId) {
-    var content = document.getElementById(sectionId);
-    var title = content.previousElementSibling.querySelector('h2 > span');
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("blogs_script.js loaded for blogs.html");
 
-    if (content.classList.contains("active")) {
-        content.classList.remove("active");
-        title.classList.remove("rotate");
-    } else {
-        content.classList.add("active");
-        title.classList.add("rotate");
+    function toggleSection(sectionId) {
+        const content = document.getElementById(sectionId);
+        const title = content.previousElementSibling.querySelector('h2 > span');
+
+        if (content.classList.contains("active")) {
+            content.classList.remove("active");
+            title.classList.remove("rotate");
+        } else {
+            content.classList.add("active");
+            title.classList.add("rotate");
+        }
     }
-}
+
+    // Initial rotation for Blog 1 (expanded by default)
+    document.querySelector('#blog1 .clickable-title h2 > span').classList.add('rotate');
+
+    // Add click listeners for all clickable titles
+    const clickableTitles = document.querySelectorAll(".clickable-title");
+    clickableTitles.forEach((title) => {
+        title.addEventListener("click", () => {
+            const sectionId = title.nextElementSibling.id;
+            toggleSection(sectionId);
+        });
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("script_blog.js loaded for blogs.html");
 
     // Theme Toggle Functionality
     const toggleButton = document.getElementById("toggle-theme-logo");
