@@ -247,6 +247,13 @@ footer {
     font-size: 18px;
 }
 
+.back2mainpage-container {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-size: 16px;
+}
+
 .blogs-container a {
     color: #00ff00;
     text-decoration: none;
@@ -357,7 +364,7 @@ footer {
 }
 
 .blog-date {
-    font-size: 16px;
+    font-size: 18px;
     color: #00ff00;
     display: flex;
     align-items: center;
@@ -371,7 +378,7 @@ footer {
 }
 
 .blog-story {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
 }
 
@@ -397,6 +404,14 @@ footer {
         width: 100%; /* Full width for image */
         margin-left: 0; /* Remove spacing on mobile */
         margin-top: 10px;
+    }
+
+    .blog-story {
+        font-size: 16px;
+    }
+
+    .blog-date {
+        font-size: 16px;
     }
 }
 
