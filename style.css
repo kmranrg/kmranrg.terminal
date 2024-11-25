@@ -413,6 +413,10 @@ footer {
     .blog-date {
         font-size: 16px;
     }
+
+    .myblogs {
+        text-align: center;
+    }
 }
 
 /* General Styling for Blog Images */
