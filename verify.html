@@ -1,3 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <title>~verification~</title>
+    <style>
+        ::selection {
+            background-color: transparent; 
+        }
+        ::-moz-selection {
+            background-color: transparent;
+        }
+        body {
+            background-color: #000000;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow-y: auto;
+            min-height: 100vh;
+            text-align: center;
+            user-select: none;
+        }
+        .terminal {
+            width: 100%;
+            max-width: 1000px;
+            background-color: #000000;
+            border-radius: 10px;
+            box-shadow: none;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .terminal-body {
+            font-size: 12px;
+            line-height: 1.5;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        @media (max-width: 600px) {
+            .terminal-body {
+                font-size: 9px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-body">
+<pre>
 ....................................:;+++++;+**++;:.................................................
 ..................................;*%SSSSSSS#SSSS%%+,...............................................
 ................................,*%%SSSSSS#SSSSSS#SS*,..............................................
@@ -53,3 +110,14 @@
 ....................;***??%%%SS#?,.,,,,,,......,,..........,,;%%???%%%%%??;.........................
 ....................+***??%%%%SS+,,...,,,....................,*%????%%%%%?*,........................
 ...................,****??%%%%#S:,,,,........................,:*%???%%%%%??;........................
+</pre>
+        </div>
+    </div>
+<script>
+    // diabling mouse right click
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+</script>    
+</body>
+</html>
