@@ -13,7 +13,7 @@
             background-color: transparent;
         }
         body {
-            background-color: #181818;
+            background-color: #000;
             color: #00ffff;
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
@@ -29,7 +29,7 @@
         .terminal {
             width: 100%;
             max-width: 1000px;
-            background-color: #181818;
+            background-color: #000;
             border-radius: 10px;
             box-shadow: none;
             position: relative;
@@ -51,10 +51,11 @@
         }
         @keyframes flicker {
             0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff; }
+            50% { opacity: 0.5; text-shadow: 0 0 5px #0000ff, 0 0 10px #0000ff; }
         }
         pre {
             animation: flicker 1.5s infinite;
+            letter-spacing: 2px;
         }
     </style>
 </head>
