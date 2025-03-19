@@ -4,3 +4,5 @@ Adding Blogs:
 2) Add your blog just below this, make sure your blog ids are in descending order.
 3) Now, open `blogs_script.js` and go to "document.querySelector('#blog3 .clickable-title h2 > span').classList.add('rotate');" and update your blog number in "#blog<num>".
 4) There you go, all done!
+5) Don't forget to remove active class from the previous blog and add to the new one.
+6) Now, you're done!

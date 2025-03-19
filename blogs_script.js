@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initial rotation for first blog (expanded by default)
-    document.querySelector('#blog4 .clickable-title h2 > span').classList.add('rotate');
+    document.querySelector('#blog5 .clickable-title h2 > span').classList.add('rotate');
 
     // Add click listeners for all clickable titles
     const clickableTitles = document.querySelectorAll(".clickable-title");
